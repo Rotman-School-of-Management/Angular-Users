@@ -1,0 +1,28 @@
+﻿<div class="row">
+    <div class="container">
+        <h1>Hi {{user?.firstName}}!</h1>
+        <p>You're logged in !!</p>
+        <p><a routerLink="/users">Manage Users</a></p>
+    </div>
+
+
+
+<div class="row">
+
+<!-- ngFor is the shortened form of NgForOf mentioned above -->
+<div class="col-md-2 mb-3"  *ngFor="let course of courses">
+  <!-- for template syntax anything inside the brackets {{}} is considered an expression, and will try to solve it by looking in the component logic -->
+  <div class="card p-3 h-100 text-center">{{course.id}}
+   <div class="card-body">
+  <h5 class="card-title">{{course.header}}</h5>
+  <p  class="card-text">{{course.description}}</p>
+
+  <img [src]="course.imageUrl" [alt]="course.header" class="img-fluid rounded">
+  <!-- ... -->
+ </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,56 @@
+﻿
+
+
+
+
+<!-- Main Application Wrapper -->
+<div class="app-container">
+ <div class="app-body">
+    <!-- Sidebar (Optional: Conditionally show based on authentication/route) -->
+    <aside class="app-sidebar" *ngIf="user">
+      <!--   <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+	     <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>-->
+
+	     <button [routerLink]="['/']">Home</button>
+	     <button [routerLink]="['/users']">Users</button>
+        <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
+    </aside>
+
+     <main class="app-content">
+
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+
+
+
+<div style="width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;">
+   <img style = " width: 100%;
+  height: auto;
+  display: block;" src="/assets/header-banner.jpg" alt="Website Banner" class="header-img">
+</div>
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+  </main>
+  </div>
+ <!-- Global Footer -->
+  <footer class="app-footer">
+    <p>&copy; 2026 Rotman School of Management.</p>
+  </footer>
+
+
+
+
+<!-- credits -->
+<div class="text-center mt-4">
+   <!-- <p>
+        <a href="https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial" target="_top">Angular 14 - User Registration and Login Example & Tutorial</a>
+    </p>
+    <p>
+        <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+    </p>-->
+</div>

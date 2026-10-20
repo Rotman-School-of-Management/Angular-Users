@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.app-container {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.btn-delete-user {
+    width: 40px;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+/* app.component.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Forces full-height layout */
+}
+
+.app-body {
+  display: flex;
+  flex: 1; /* Automatically expands to push the footer down */
+}
+
+.app-sidebar {
+  marging-top: 50px !important;
+  margin-left: 0px;
+  width: 260px;
+  background-color: #f8f9fa;
+
+}
+
+.app-sidebar a, .app-sidebar button {
+  font-size: x-large;
+  font-weight: bold;
+  color: blue;
+  width: 260px;
+  background-color: #f8f9fa;
+}
+
+.app-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto; /* Scroll individual content pane rather than page */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
